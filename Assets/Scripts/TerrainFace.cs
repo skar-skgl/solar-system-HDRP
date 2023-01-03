@@ -60,6 +60,13 @@ public class TerrainFace
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
         mesh.uv = uv;
+        // Create a second set of UVs for standard shader
+        Vector2[] uv2 = new Vector2[vertices.Length];
+        for (int i = 0; i < uv2.Length; i++)
+        {
+            uv2[i] = new Vector2(vertices[i].x, vertices[i].z);
+        }
+        mesh.uv2 = uv2;
 
     }
 

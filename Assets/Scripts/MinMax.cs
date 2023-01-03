@@ -15,13 +15,13 @@ public class MinMax
 
     public void AddValue(float value)
     {
-        if (value < Min)
-        {
-            Min = value;
-        }
         if (value > Max)
         {
             Max = value;
+        }
+        if (value < Min)
+        {
+            Min = value;
         }
     }
 }
